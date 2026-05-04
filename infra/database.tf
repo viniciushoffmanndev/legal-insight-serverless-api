@@ -41,10 +41,9 @@ resource "aws_db_instance" "legal_db" {
   db_name = "legalinsightdb"
 
   # Credenciais de acesso ao banco
-  # ⚠️ Em produção, isso NÃO deve ficar no código
-  # O ideal é usar AWS Secrets Manager
-  username = "adminuser"
-  password = "mudar_senha_depois_123"
+  # Credenciais protegidas via Variáveis de Ambiente
+  username = var.db_username
+  password = var.db_password
 
   # Grupo de parâmetros padrão do PostgreSQL
   parameter_group_name = "default.postgres15"
