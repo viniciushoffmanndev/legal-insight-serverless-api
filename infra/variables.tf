@@ -9,3 +9,8 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+
+variable "alert_email" {
+  description = "E-mail que receberá os alertas de custo do AWS Budget"
+  type        = string
+}
