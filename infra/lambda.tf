@@ -15,7 +15,7 @@ resource "aws_iam_role" "lambda_exec" {
 # 2. Permissão para rodar dentro da VPC (Obrigatório para acessar RDS/Redis)
 resource "aws_iam_role_policy_attachment" "lambda_vpc_access" {
   role       = aws_iam_role.lambda_exec.name
-  policy_arn = "arn:aws:iam:aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
 }
 
 # 3. Zip do Código (Preparando a entrega)
