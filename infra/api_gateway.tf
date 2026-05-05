@@ -14,7 +14,7 @@ resource "aws_apigatewayv2_api" "legal_api" {
 resource "aws_apigatewayv2_stage" "prod" {
   api_id      = aws_apigatewayv2_api.legal_api.id
   name        = "prod"
-  auto_deploy = True
+  auto_deploy = true
 }
 
 # 3. Integração: Conecta a API com a sua Função Lambda
