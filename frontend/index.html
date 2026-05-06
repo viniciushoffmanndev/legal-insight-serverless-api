@@ -27,7 +27,7 @@
             
             try {
                 // Substituiremos essa URL pela que o Terraform gerou no output
-                const API_URL = "SUA_URL_DO_API_GATEWAY_AQUI/orchestrator";
+                const API_URL = "https://wmbq08ixwc.execute-api.us-east-1.amazonaws.com/prod/orchestrator";
                 const response = await fetch(API_URL);
                 const data = await response.json();
                 
