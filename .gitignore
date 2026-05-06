@@ -11,7 +11,7 @@ venv/
 *.tfstate.backup
 .terraform.lock.hcl
 
-# Artefatos do Lambda
+# Artefatos do Lambda|
 *.zip
 
 # IDE
